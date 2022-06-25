@@ -1,0 +1,28 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminF/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+    <div class="container">
+        <div class="row">
+            <form class="forms-sample" method="post">
+                    <div class="form-group">
+                      <label asp-for="Name"></label>
+                      <input asp-for="Name" class="form-control" placeholder="Name">
+                      <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                      <label asp-for="Desc"></label>
+                      <input asp-for="Desc" class="form-control" placeholder="Email">
+                      <span asp-validation-for="Desc" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Create</button>
+                  </form>
+        </div>
+    </div>
+    @section Scripts{
+         <partial name="_Validation"/>
+    }
+

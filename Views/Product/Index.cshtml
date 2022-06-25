@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Product>;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ <section id="products">
+            <div class="container">
+                <input type="hidden" id="productCount" value="@ViewBag.ProductCount" />
+                <div id="listProduct" class="row">
+                   <partial name="_ProductPartial"/>
+                </div>
+                <div class="row justify-content-center">
+                    <button id="loadmore" class="btn btn-success">Load More..</button>
+                </div>
+            </div>
+        </section>
+

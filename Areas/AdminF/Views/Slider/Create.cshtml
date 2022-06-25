@@ -1,0 +1,23 @@
+﻿@model Slider
+@{
+
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminF/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <form class="forms-sample" method="post enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Photo"></label>
+                <input asp-for="Photo" class="form-control" placeholder="Name" accept="image/*">
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Create</button>
+        </form>
+    </div>
+</div>
+@section Scripts{
+    <partial name="_Validation" />
+}
+
